@@ -13,91 +13,101 @@ export const Questions = [
     {
         prompt: "Подейкують, що його картину Анрі Матісс придбав для власної колекції:",
         image: moroz,
-        optionA: "Тарас Шевченко",
-        optionB: "Архип Куїнджі",
-        optionC: "Михайло Мороз",
-        optionD: "Микола Ге",
-        asnwer: "optionC",
+        answerOptions: [
+            { answer: 'Тарас Шевченко', isCorrect: false},
+            { answer: 'Архип Куїнджі', isCorrect: false},
+            { answer: 'Михайло Мороз', isCorrect: true},
+            { answer: 'Микола Ге', isCorrect: false},
+        ]
     },
     {
         prompt: "Картина Василя Кричевського, котра потрапила до колекції Степана Давимуки:",
         image: vKrychevskyi,
-        optionA: "Гладіолуси",
-        optionB: "Поділ",
-        optionC: "Натюрморт з лялькою",
-        optionD: "Церква в Ходорові",
-        asnwer: "optionA",
+        answerOptions: [
+            { answer: 'Гладіолуси', isCorrect: true},
+            { answer: 'Поділ', isCorrect: false},
+            { answer: 'Натюрморт з лялькою', isCorrect: false},
+            { answer: 'Церква в Ходорові', isCorrect: false},
+        ]
     },
     {
         prompt: "Який український художник зобразив пожежу Москви:",
         image: aivazovskyi,
-        optionA: "Іван Айвазовський",
-        optionB: "Іван Марчук",
-        optionC: "Казимир Малевич",
-        optionD: "Микола Бурачек",
-        asnwer: "optionA",
+        answerOptions: [
+            { answer: 'Іван Айвазовський', isCorrect: true},
+            { answer: 'Іван Марчук', isCorrect: false},
+            { answer: 'Казимир Малевич', isCorrect: false},
+            { answer: 'Микола Бурачек', isCorrect: false},
+        ]
     },
     {
         prompt: "Яке місто зображене на картині 1994 «Падіння Ікара» Юрія Коха:",
         image: kokh,
-        optionA: "Лондон",
-        optionB: "Вінниця",
-        optionC: "Чернівці",
-        optionD: "Львів",
-        asnwer: "optionD",
+        answerOptions: [
+            { answer: 'Лондон', isCorrect: false},
+            { answer: 'Вінниця', isCorrect: false},
+            { answer: 'Чернівці', isCorrect: false},
+            { answer: 'Львів', isCorrect: true},
+        ]
     },
     {
         prompt: "Якому художнику доручили виконання малюнків коронації нового короля Англії, Едварда VII:",
         image: fKrychevskyi,
-        optionA: "Олександру Мурашку",
-        optionB: "Фотію Красицькому",
-        optionC: "Федору Кричевському",
-        optionD: "Миколі Пимоненку",
-        asnwer: "optionC",
+        answerOptions: [
+            { answer: 'Олександру Мурашку', isCorrect: false},
+            { answer: 'Фотію Красицькому', isCorrect: false},
+            { answer: 'Федору Кричевському', isCorrect: true},
+            { answer: 'Миколі Пимоненку', isCorrect: false},
+        ]
     },
     {
         prompt: "Картина  «Квітучі яблуні» є доробком:",
         image: malevych,
-        optionA: "Костянтина Крижицького",
-        optionB: "Казимира Малевича",
-        optionC: "Миколи Пимоненка",
-        optionD: "Андрія Киселіва",
-        asnwer: "optionB",
+        answerOptions: [
+            { answer: 'Костянтина Крижицького', isCorrect: false},
+            { answer: 'Казимира Малевича', isCorrect: true},
+            { answer: 'Миколи Пимоненка', isCorrect: false},
+            { answer: 'Андрія Киселіва', isCorrect: false},
+        ]
     },
     {
         prompt: "Представник українського мистецтва Василь Курилик є художником:",
         image: kurylyk,
-        optionA: "Канади",
-        optionB: "США",
-        optionC: "Австралії",
-        optionD: "Італії",
-        asnwer: "optionA",
+        answerOptions: [
+            { answer: 'Канади', isCorrect: true},
+            { answer: 'США', isCorrect: false},
+            { answer: 'Австралії', isCorrect: false},
+            { answer: 'Італії', isCorrect: false},
+        ]
     },
     {
         prompt: "Яке місто зображає картина Ядвіги Мацієвської:",
         image: matsiievska,
-        optionA: "Дніпро",
-        optionB: "Київ",
-        optionC: "Запоріжжя",
-        optionD: "Нова Каховка",
-        asnwer: "optionB",
+        answerOptions: [
+            { answer: 'Дніпро', isCorrect: false},
+            { answer: 'Київ', isCorrect: true},
+            { answer: 'Запоріжжя', isCorrect: false},
+            { answer: 'Нова Каховка', isCorrect: false},
+        ]
     },
     {
         prompt: "Картина «Трембіти» – портрет неперевершеної Алли Горської є доробком:",
         image: sevruk,
-        optionA: "Алли Горської",
-        optionB: "Катерини Білокур",
-        optionC: "Олександри Екстер",
-        optionD: "Галини Севрук",
-        asnwer: "optionD",
+        answerOptions: [
+            { answer: 'Алли Горської', isCorrect: false},
+            { answer: 'Катерини Білокур', isCorrect: false},
+            { answer: 'Олександри Екстер', isCorrect: false},
+            { answer: 'Галини Севрук', isCorrect: true},
+        ]
     },
     {
         prompt: "Співець Києва, в кожній картині котрого приховано щонайменше одного кота:",
         image: kaplan,
-        optionA: "Самуїл Каплан",
-        optionB: "Сергій  Шишко",
-        optionC: "Микола Глущенко",
-        optionD: "Анатолій Криволап",
-        asnwer: "optionA",
+        answerOptions: [
+            { answer: 'Самуїл Каплан', isCorrect: true},
+            { answer: 'Сергій  Шишко', isCorrect: false},
+            { answer: 'Микола Глущенко', isCorrect: false},
+            { answer: 'Анатолій Криволап', isCorrect: false},
+        ]
     }
 ];

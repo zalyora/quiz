@@ -1,30 +1,48 @@
 import './App.css';
-import { useState } from "react";
-import { GameStateContext } from "./context/Context";
-import Menu from './components/Menu';
 import Quiz from './components/Quiz';
-import QuizEnd from './components/QuizEnd';
+import Score from './components/Score';
+import store from './stores/store';
+import { connect } from 'react-redux';
+import { handleAnswerOptionClick, handleRestartQuiz } from './actions/Actions'
+import { Questions } from './context/Questions';
 
-function App() {
-  const [gameState, setGameState] = useState("menu");
-  const [score, setScore] = useState(0);
+const App = ({
+  currentQuestion,
+  showScore,
+  score,
+  handleAnswerOptionClick,
+  handleRestartQuiz
+}) => {
+  const restartQuiz = () => {
+    handleRestartQuiz();
+  };
 
   return (
     <div className="App">
-      <GameStateContext.Provider
-        value={{
-          gameState,
-          setGameState,
-          score,
-          setScore,
-        }}
-      >
-        {gameState === "menu" && <Menu />}
-        {gameState === "playing" && <Quiz />}
-        {gameState === "finished" && <QuizEnd />}
-      </GameStateContext.Provider>
+      {showScore ? (
+        <Score
+          score={score}
+          totalQuestions={Questions.length}
+          handleRestartQuiz={restartQuiz}
+        />
+      ) : (
+        <Quiz
+          currentQuestion={currentQuestion}
+          handleAnswerOptionClick={handleAnswerOptionClick}
+        />
+      )}
     </div>
   );
-}
+};
 
-export default App;
+const mapStateToProps = (state) => ({
+  currentQuestion: state.currentQuestion,
+  showScore: state.showScore,
+  score: state.score,
+});
+
+const mapDispatchToProps = {
+  handleAnswerOptionClick,
+  handleRestartQuiz
+};
+export default connect(mapStateToProps, mapDispatchToProps)(App);
